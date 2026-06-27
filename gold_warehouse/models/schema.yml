@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: fact_sales
+    columns:
+      - name: order_id
+        tests:
+          - unique   # Tells dbt to flag an error if there are duplicate order IDs
+          - not_null # Flags an error if an order ID is missing
